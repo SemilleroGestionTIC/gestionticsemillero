@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido!</title>
+    <link rel="stylesheet" href="estilos.min.css">
+    <link rel="stylesheet" href="Librerias/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #3b80c0;
+        }
+        img {
+            margin-left: 1px;
+        }
+    </style>
+</head>
+<body>
+    <section class="h-100 gradient-form" style="background-color: #3b80c0;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <h4 class="mt-1 mb-5 pb-1">Semilleros de Investigación</h4>
+                                    </div>
+
+                                    <form  action="Back_end/insertar_estudiante.php" method="POST" onsubmit="return validarFormulario()">
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="documento">Número de documento:</label>
+                                            <input type="text" id="documento" class="form-control" name="numero_doc" placeholder="Número de documento" />
+                                            <br>
+                                            <label class="form-label" for="nombre">Nombre del Estudiante:</label>
+                                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre del Estudiante" />
+                                            <br>
+                                            <label class="form-label" for="carrera">Carrera:</label>
+                                            <input type="text" id="carrera" name="carrera" class="form-control" placeholder="Carrera" />
+                                            <br>
+                                            <label class="form-label" for="semestre">Semestre:</label>
+                                            <input type="number" id="semestre" name="semestre" class="form-control" placeholder="Semestre en Curso" />
+                                            <br>
+                                            <label class="form-label" for="correo">Correo:</label>
+                                            <input type="email" id="correo" name="correo" class="form-control" placeholder="Correo" />
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <img src="Imagenes/imagen2.jpg.png" style="width: 600px;" alt="logo" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="Validaciones.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+.gradient-custom-2{background: #fccb90;background: black;background: black;}@import url('https://fonts.googleapis.com/css2?family=swap');
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Open Sans';}body{background-image: url(Imagenes/imagen4.jpg.jpeg);background-size: cover;
+    background-repeat: no-repeat;background-attachment: fixed;}nav{max-width: 900px;margin: auto;background-color: rgb(97,85,85);font-size: 20px;margin-top: 50px;
+        border-radius: 30px;}.menu-horizontal{list-style: none;display: flex;justify-content: space-around;}.menu-horizontal > li >a{display: block;padding: 15px 20px;
+            color: rgb(238,246,248);text-decoration: none;}.menu-horizontal > li:hover{background-color: rgb(75,82,75);}.menu-vertical{position: absolute;display: none;
+                list-style: none;width: 200px;background-color: rgba(243,230,230,0.5);}.menu-horizontal li:hover .menu-vertical{display: block;
+                }.menu-vertical li:hover{background-color: rgb(207,188,188);}.menu-vertical li a{display: block;color: rgb(26,21,21);padding: 15px 15px 15px 20px;
+                    text-decoration: none;}.mision,.vision{background-color: #fff;border-radius: 15px;box-shadow: 0px 0px 15px rgba(0,0,0,0.1);padding: 30px;
+                        margin-bottom: 30px;}.icon{font-size: 50px;color: #0d6efd;margin-bottom: 20px;}.contact-card{border-radius: 10px;
+                            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);padding: 20px;background-color: #fff;height: 100%;}.contact-card h5{font-size: 24px;
+                                margin-bottom: 20px;}.contact-icon{font-size: 50px;color: #0d6efd;margin-bottom: 15px;}

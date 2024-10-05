@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="estilos.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function validarFormulario() {
+            // Obtiene los valores de los campos
+            var nombre = document.getElementById("nombre").value;
+            var correo = document.getElementById("email").value;
+            var mensaje = document.getElementById("mensaje").value;
+
+            // Expresiones regulares para validaciones
+            var nombreRegex = /^[a-zA-Z\s]+$/; // Solo letras y espacios
+            var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Formato de correo electrónico
+
+            // Validación de campos vacíos
+            if (nombre === "" || correo === "" || mensaje === "") {
+                alert("Por favor, llene todos los campos.");
+                return false; // Evita que el formulario se envíe
+            }
+
+            // Validación del nombre (solo letras y espacios)
+            if (!nombreRegex.test(nombre)) {
+                alert("El nombre solo debe contener letras y espacios.");
+                return false;
+            }
+
+            // Validación del formato del correo electrónico
+            if (!correoRegex.test(correo)) {
+                alert("Por favor, ingrese un correo electrónico válido.");
+                return false;
+            }
+
+            return true; // Permite que el formulario se envíe si todo está bien
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="menu-horizontal">
+            <li><a href="Inicio.html">Inicio</a></li>
+            <li>
+                <a href="#">Contactos</a>
+                <ul class="menu-vertical">
+                    <li><a href="Contactos.html">Informacion contacto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Noticias</a>
+                <ul class="menu-vertical">
+                    <li><a href="Noticias.html">Eventos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Quienes Somos</a>
+                <ul class="menu-vertical">
+                    <li><a href="Mision_Vision.html">Mision y visión</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Semilleros.html">Registrarse</a>
+            </li>
+        </ul>
+    </nav>
+    <br><br>
+    <!-- Sección de Contacto -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <div class="row">
+                <!-- Primer Contenedor: Formulario de Contacto -->
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <span class="contact-icon"><i class="fas fa-desktop"></i></span>
+                        <h5>Formulario de Contacto</h5>
+                        <form action="Back_end/insertar_contacto.php" method="POST" onsubmit="return validarFormulario()">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="correo" placeholder="Ingresa tu correo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="3" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Segundo Contenedor: Redes Sociales -->
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <br><br>
+                        <h5>Escríbenos</h5>
+                        <div class="contact-icon">📧</div>
+                        <p>Via correo electrónico</p>
+                        <label for="mensaje" class="form-label">gestionticsemillero@gmail.com</label>
+                        <br>
+                        <i class="fab fa-whatsapp" style="font-size: 50px; color: #25D366;"></i>
+                        <p>Via WhatsApp</p>
+                        <p>Estamos disponibles en el siguiente número:</p>
+                        <p>3012912050</p>
+                    </div>
+                </div>
+
+                <!-- Tercer Contenedor: Dirección Física -->
+                <div class="col-md-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">📍</div>
+                        <h5>Visítanos</h5>
+                        <p>Nuestra sede se encuentra en:</p>
+                        <p>Sucre Sincelejo,<br>Carrera 21 #23-104.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Validacion_Contacto.js"></script>
+</body>
+</html>

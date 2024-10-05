@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias del Semillero</title>
+    <link rel="stylesheet" href="estilos.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<style>
+        #newsCarousel img {
+            height: 350px; /* Aumentar el tamaño del carrusel */
+            object-fit: cover;
+        }
+
+        /* Fondo oscuro semitransparente para las captions */
+        .carousel-caption {
+            background-color: rgba(243, 235, 235, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Texto en blanco */
+        .carousel-caption h5, .carousel-caption p{
+            color: black;
+        }
+        /* Estilo para asegurar que los contenedores sean largos */
+        .custom-container {
+            height: 400px; /* Altura personalizada */
+        }
+
+        /* Ajuste para que el video y el carrusel tengan el mismo tamaño */
+        .video-container iframe {
+            height: 100%;
+            width: 100%;
+        }
+</style>
+<body>
+    <nav>
+        <ul class="menu-horizontal">
+            <li><a href="Inicio.html">Inicio</a></li>
+            <li>
+               <a href="#">Contactos</a>
+               <ul class="menu-vertical">
+                <li><a href="Contactos.html">Informacion contacto</a></li>
+               </ul>
+            </li>
+            <li>
+                <a href="#">Noticias</a>
+                <ul class="menu-vertical">
+                    <li><a href="Noticias.html">Eventos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Quienes Somos</a>
+                <ul  class="menu-vertical">
+                    <li><a href="Mision_Vision.html">Mision y visión</a></li>
+                </ul>
+            </li>
+            <li>
+                 <li><a href="Semilleros.html">Registrarse</a></li>
+        </ul>
+        
+    </nav>
+    <br>
+    <br>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Últimas Noticias del Semillero</h2>
+            <div class="row">
+                <!-- Columna del Carrusel -->
+                <div class="col-md-6">
+                    <div id="newsCarousel" class="carousel slide custom-container" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Noticia 1 -->
+                            <div class="carousel-item active">
+                                <img src="Imagenes/Semillero1.jpeg" class="d-block w-100" alt="Noticia 1" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Transformando la Educación</h5>
+                                    <p>La investigación sobre el uso de las Tecnologías de la Información y la Comunicación (TIC) está revolucionando 
+                                        los métodos de enseñanza y aprendizaje.</p>
+    
+                                    <!-- Botón Leer más que expande texto colapsado -->
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#moreInfo1" role="button" aria-expanded="false" aria-controls="moreInfo1">
+                                        Leer más
+                                    </a>
+    
+                                    <!-- Texto colapsable -->
+                                    <div class="collapse mt-2" id="moreInfo1">
+                                        <div class="card card-body">
+                                            <p>
+                                                Este proyecto está alineado con la misión de promover la innovación pedagógica y responde a la visión de liderar la transformación 
+                                                digital en la educación
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Noticia 2 -->
+                            <div class="carousel-item">
+                                <img src="Imagenes/Semillero2.jpeg" class="d-block w-100" alt="Noticia 2" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Uniendo Fuerzas para Transformar el Aprendizaje</h5>
+                                    <p>En un mundo cada vez más interconectado, la colaboración interdisciplinaria se ha convertido en un pilar fundamental para 
+                                        impulsar la innovación educativa.</p>
+    
+                                    <!-- Botón Leer más que expande texto colapsado -->
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#moreInfo2" role="button" aria-expanded="false" aria-controls="moreInfo2">
+                                        Leer más
+                                    </a>
+    
+                                    <!-- Texto colapsable -->
+                                    <div class="collapse mt-2" id="moreInfo2">
+                                        <div class="card card-body">
+                                            <p>
+                                                Este enfoque busca unir el conocimiento y la experiencia de diversas áreas del saber para diseñar soluciones 
+                                                tecnológicas que aborden los desafíos educativos actuales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Noticia 3 -->
+                            <div class="carousel-item">
+                                <img src="Imagenes/Semillero3.jpeg" class="d-block w-100" alt="Noticia 3" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Mejorando la Eficiencia en la Educación y los Negocios</h5>
+                                    <p>El desarrollo de plataformas colaborativas está revolucionando la manera en que se gestiona el conocimiento en entornos educativos 
+                                        y empresariales.</p>
+    
+                                    <!-- Botón Leer más que expande texto colapsado -->
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#moreInfo3" role="button" aria-expanded="false" aria-controls="moreInfo3">
+                                        Leer más
+                                    </a>
+    
+                                    <!-- Texto colapsable -->
+                                    <div class="collapse mt-2" id="moreInfo3">
+                                        <div class="card card-body">
+                                            <p>
+                                                Este proyecto se enfoca en crear soluciones tecnológicas que optimicen el flujo de información, facilitando el acceso 
+                                                y la compartición de conocimiento en tiempo real.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Controles del Carrusel -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Columna del Video -->
+                <div class="col-md-6">
+                    <div class="video-container custom-container">
+                        <h5 class="mb-3">Semillero Gestion TIC</h5>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="Imagenes/Generalidades de los Semilleros Virtuales - CUN.mp4" title="Video del Semillero" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
